@@ -6,11 +6,11 @@ targetScope = 'subscription'
 //var storageAccountPrefix = 'st'
 
 // ***** Parameters ***** //
-param projectName string = 'tjs-dev-aztraining-lab1'
-param storageName string = 'tjsdevaztraininglab1st'
-param location string = 'eastus'
+param projectName string = '[Project_Name]'
+param storageName string = '[Storage_Name]'
+param location string = [Location]'
 param tags object = {
-  owner: 'Tim Shand'
+  owner: '[Your_Name]'
   project: 'AzureTraining'
 }
 
@@ -50,7 +50,7 @@ module newVM1 'vms.bicep' = {
   params: {
     vmName: '${projectName}-vm1'
     adminUsername: 'linuxadmin'
-    adminPasswordOrKey: 'L1nUx@dMiN!2468'
+    adminPasswordOrKey: '[Password]'
     location: location
     tags: tags
     storageUri: newStorage.outputs.storageUri
@@ -63,7 +63,7 @@ module newVM2 'vms.bicep' = {
   params: {
     vmName: '${projectName}-vm2'
     adminUsername: 'linuxadmin'
-    adminPasswordOrKey: 'L1nUx@dMiN!2468'
+    adminPasswordOrKey: '[Password]'
     location: location
     tags: tags
     storageUri: newStorage.outputs.storageUri
